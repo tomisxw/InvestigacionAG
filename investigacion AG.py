@@ -44,7 +44,7 @@ def calcular_fitness(individuo):
     # Costo total
     costo_total = COSTO_POR_CASA * N_CASAS
 
-    # Simulación 20 años con payback exacto
+    # Simulación 20 años
     ahorro_acumulado = 0
     payback_anio = None
 
