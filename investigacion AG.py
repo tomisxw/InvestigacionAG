@@ -261,8 +261,6 @@ def correr(n_corridas=10,generaciones=100,tam_pob=50):
     print(f"Potencia = {ind_best[0]:.2f} kWp/casa | Tilt = {ind_best[1]:.1f}° | Azimut = {ind_best[2]:.1f}° | T = {ind_best[3]:.1f}°C")
     print(f"Payback = {det_best['payback_acum']:.2f} años" if math.isfinite(det_best['payback_acum']) else "NO recupera en 20 años")
     print(f"Egen = {det_best['Egen_total']:.0f} | Eauto = {det_best['Eauto']:.0f} | Einj = {det_best['Einj']:.0f}")
-    alpha_barrio=det_best['Eauto']/det_best['Egen_total'] if det_best['Egen_total']>0 else 0.0
-    print(f"α emergente barrio = {alpha_barrio:.2%}")
 
     load_m = load_profiles_barrio(CONSUMO_ANUAL, N_CASAS)                    
     pv_m   = pv_profiles_barrio(ind_best[0], ind_best[1], ind_best[2], ind_best[3])  
